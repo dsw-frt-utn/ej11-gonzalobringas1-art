@@ -1,10 +1,8 @@
 ﻿using Dsw2026Ej11.Tests;
 
-namespace Dsw2026Ej11;
-
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         bool salir = false;
 
@@ -13,7 +11,7 @@ internal class Program
             Console.Clear();
             MostrarMenu();
 
-            string opcion = Console.ReadLine();
+            string? opcion = Console.ReadLine(); 
 
             switch (opcion)
             {
@@ -42,24 +40,24 @@ internal class Program
                     break;
             }
         }
-    }
 
-    static void MostrarMenu()
-    {
-        Console.WriteLine("═══════════════════════════════════════");
-        Console.WriteLine("           MENÚ PRINCIPAL");
-        Console.WriteLine("═══════════════════════════════════════");
-        Console.WriteLine("1. Ejemplo List");
-        Console.WriteLine("2. Ejemplo Dictionary");
-        Console.WriteLine("3. Ejemplo LINQ");
-        Console.WriteLine("4. Salir");
-        Console.WriteLine("═══════════════════════════════════════");
-        Console.Write("Seleccione una opción: ");
-    }
+        void MostrarMenu()
+        {
+            Console.WriteLine("═══════════════════════════════════════");
+            Console.WriteLine("           MENÚ PRINCIPAL");
+            Console.WriteLine("═══════════════════════════════════════");
+            Console.WriteLine("1. Ejemplo List");
+            Console.WriteLine("2. Ejemplo Dictionary");
+            Console.WriteLine("3. Ejemplo LINQ");
+            Console.WriteLine("4. Salir");
+            Console.WriteLine("═══════════════════════════════════════");
+            Console.Write("Seleccione una opción: ");
+        }
 
-    static void EsperarTecla()
-    {
-        Console.WriteLine("\nPresione una tecla para volver al menú...");
-        Console.ReadKey();
+        void EsperarTecla()
+        {
+            Console.WriteLine("\nPresione una tecla para volver al menú...");
+            Console.ReadKey();
+        }
     }
 }
